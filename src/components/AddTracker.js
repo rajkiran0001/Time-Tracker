@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import TrackerDataService from "../services/TrackerService";
 import Datetime from "react-datetime";
-import "./global.css";
 import "../App.css";
 import DisplayComponent from "./DisplayTrackerComponent";
 import TrackerButtonComponent from "./TrackerButtonComponent";
@@ -18,7 +17,7 @@ const AddTracker = () => {
   const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 });
   const [interv, setInterv] = useState();
   const [status, setStatus] = useState(0);
-  const [dateandtime, setDateAndTime] = useState();
+  const [dateandtime, setDateAndTime] = useState(new Date());
   const [isVisible, setIsVisible] = useState(false);
 
   //setInterval function that runs the run function 10 miliseconds
@@ -257,7 +256,7 @@ const AddTracker = () => {
                 onClick={startTimer}
                 className="btn btn-success move-right"
               >
-                start timer
+                Time Tracker
               </button>
             ) : null}
           </div>
