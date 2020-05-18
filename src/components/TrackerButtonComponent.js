@@ -3,6 +3,7 @@ import React from "react";
 function BtnComponent(props) {
   return (
     <div>
+      {/* show start button when the status is equal to 0 */}
       {props.status === 0 ? (
         <button
           className="stopwatch-btn stopwatch-btn-gre"
@@ -13,7 +14,7 @@ function BtnComponent(props) {
       ) : (
         ""
       )}
-
+      {/* show reset and stop button when the status is equal to 1 */}
       {props.status === 1 ? (
         <div>
           <button
@@ -32,7 +33,7 @@ function BtnComponent(props) {
       ) : (
         ""
       )}
-
+      {/* show reset and stop button when the status is equal to 2 */}
       {props.status === 2 ? (
         <div>
           <button
@@ -51,7 +52,7 @@ function BtnComponent(props) {
       ) : (
         ""
       )}
-
+      {/* show Manual mode when the status is equal to 3 */}
       {props.status === 3 ? (
         <div>
           <br />

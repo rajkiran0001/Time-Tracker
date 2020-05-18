@@ -154,9 +154,10 @@ const AddTracker = () => {
 
   return (
     <div className="submit-form">
+      {/* show successfull when the form is submit into the database */}
       {submitted ? (
         <div>
-          <h4>You submitted successfully!</h4>
+          <h4>You booked successfully!</h4>
           <button className="btn btn-success" onClick={newTracker}>
             Add
           </button>
@@ -174,7 +175,6 @@ const AddTracker = () => {
               onChange={handleInputChange}
               name="title"
             />
-
             <label htmlFor="description">Description</label>
             <input
               type="text"
@@ -185,6 +185,7 @@ const AddTracker = () => {
               onChange={handleInputChange}
               name="description"
             />
+            {/* show hours, minites and secounds when user wants to book time without the Tracker */}
             {status === 3 ? (
               <div>
                 <label htmlFor="description">Seconds</label>
@@ -231,9 +232,9 @@ const AddTracker = () => {
                 />
               </div>
             ) : null}
-
             <div className="clock-holder">
               <div className="stopwatch">
+                {/* send properties to the components */}
                 <DisplayComponent time={time} />
                 <TrackerButtonComponent
                   status={status}
@@ -247,6 +248,7 @@ const AddTracker = () => {
             <button onClick={changeStatus} className="btn btn-success">
               Manual Time input
             </button>
+            {/* set time traker button visible when the user wants to book time directly from the tracker */}
             {isVisible ? (
               <button
                 onClick={startTimer}
@@ -257,7 +259,7 @@ const AddTracker = () => {
             ) : null}
           </div>
           <div>
-            <label>Date and Time:</label>{" "}
+            <label>Date and Time:</label> {/* date and time input fields */}
             <Datetime onChange={onChange} value={dateandtime} />
           </div>
           <br />
