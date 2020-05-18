@@ -104,7 +104,6 @@ const AddTracker = () => {
           updatedH: response.data.updatedM,
         });
         setSubmitted(true);
-        console.log(response.data);
         setTime({ ms: 0, s: 0, m: 0, h: 0 });
       })
       .catch((e) => {
@@ -121,34 +120,31 @@ const AddTracker = () => {
     setStatus(0);
   };
   // check the length of the user hours input field
-  const maxHoursLengthCheck = (object) => {
-    if (object.target.value.length > object.target.maxLength) {
-      object.target.value = object.target.value.slice(
-        0,
-        object.target.maxLength
-      );
+  const maxHoursLengthCheck = (hours) => {
+    if (hours.target.value.length > hours.target.maxLength) {
+      hours.target.value = hours.target.value.slice(0, hours.target.maxLength);
     }
-    if (object.target.value >= 24) {
-      object.target.value = 23;
+    if (hours.target.value >= 24) {
+      hours.target.value = 23;
     }
-    if (object.target.value <= 0) {
-      object.target.value = 0;
+    if (hours.target.value <= 0) {
+      hours.target.value = 0;
     }
   };
   // check the length of the user mins and secounds input field
 
-  const maxMinsAndSecsLengthCheck = (object) => {
-    if (object.target.value.length > object.target.maxLength) {
-      object.target.value = object.target.value.slice(
+  const maxMinsAndSecsLengthCheck = (MinsAndSecs) => {
+    if (MinsAndSecs.target.value.length > MinsAndSecs.target.maxLength) {
+      MinsAndSecs.target.value = MinsAndSecs.target.value.slice(
         0,
-        object.target.maxLength
+        MinsAndSecs.target.maxLength
       );
     }
-    if (object.target.value >= 60) {
-      object.target.value = 59;
+    if (MinsAndSecs.target.value >= 60) {
+      MinsAndSecs.target.value = 59;
     }
-    if (object.target.value <= 0) {
-      object.target.value = 0;
+    if (MinsAndSecs.target.value <= 0) {
+      MinsAndSecs.target.value = 0;
     }
   };
   //call setDateAndTime function to add the data into the variable

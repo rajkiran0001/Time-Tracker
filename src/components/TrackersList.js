@@ -7,6 +7,7 @@ const TrackersList = () => {
   const [searchDesc, setsearchDesc] = useState("");
   let [page, setPage] = useState(1);
 
+  //call retrieveTrackers function on the inital page load
   useEffect(() => {
     retrieveTrackers();
   }, []);
@@ -20,30 +21,26 @@ const TrackersList = () => {
     TrackerDataService.getAll()
       .then((response) => {
         setTrackers(response.data);
-        console.log(response.data);
       })
       .catch((e) => {
         console.log(e);
       });
   };
-
+  // find description based on user search field
   const findByDesc = () => {
     TrackerDataService.findByDesc(searchDesc)
       .then((response) => {
         setTrackers(response.data);
-        console.log(response.data);
       })
       .catch((e) => {
         console.log(e);
       });
   };
-
+  // pagination with limit set to 10 pages
   const fetchPage = (page) => {
     axios
       .get(`http://localhost:8080/api/trackers/?page=${page}&limit=10`)
       .then((res) => {
-        console.log(res.data);
-
         setTrackers(res.data);
       })
       .catch((err) => {
@@ -60,8 +57,6 @@ const TrackersList = () => {
 
   //On everyclick increment the page by one
   const nextPage = (e) => {
-    console.log(trackers.length);
-
     if (page >= 0 && page <= trackers.length) {
       setPage((page = page + 1));
       fetchPage(page);

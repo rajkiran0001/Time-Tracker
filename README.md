@@ -27,7 +27,8 @@ You will also see any lint errors in the console.
 - I did not like the search feature applied only for task description. Would be nice to apply search feature for more input fields
 - It would be nice to have the total time spent on a task per day/month
 - If i had more time, i would improve clean coding - use more concrete variable names and functions that use intelligent task
-- i would also implement unit testing for the frontend with jest and enzyme and backend with Mocha
+- i would implement unit testing for the frontend with jest and enzyme and backend with Mocha
+- I would also deploy both frontend and backend on the server like heroku or netlify.
 - i would implement above nice to have features.
 - i would also implement UI/UX with styled components or Material UI
 - My pagination and Date and time feature need improvement
