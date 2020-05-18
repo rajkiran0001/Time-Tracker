@@ -10,9 +10,12 @@ Time-Tracker Application (This is client code - for server code clone or downloa
 
 - clone or download the project https://github.com/rajkiran0001/Time-Tracker.git
 - cd Time-Tracker
-- npm install
+ 
+## npm install
 
-### `npm start`
+- It installs all packages
+
+## npm start
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
