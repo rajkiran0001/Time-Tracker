@@ -23,7 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-## Answers:
+## More Features:
 
 - I have spent around 8 hours for this assignment.
 - I like the features because each feature is different and gave me unique experience. It made me think different possible methods to handle features. The use case is easy to read and understand.
